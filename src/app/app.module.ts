@@ -7,6 +7,7 @@ import { GalleryObjectComponent } from './gallery/gallery-object/gallery-object.
 
 import { MemeService } from './meme.service';
 import { HeaderComponent } from './header/header.component';
+import { BuilderComponent } from './builder/builder.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     GalleryComponent,
     GalleryObjectComponent,
-    HeaderComponent
+    HeaderComponent,
+    BuilderComponent
   ],
   imports: [
     BrowserModule
