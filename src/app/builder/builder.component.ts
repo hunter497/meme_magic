@@ -15,12 +15,7 @@ export class BuilderComponent implements OnInit {
   constructor(private memeService: MemeService) { }
 
   ngOnInit() {
-    this.meme = this.memeService.getMemes()[0];
-    this.memeService.memeSelected.subscribe(
-      (meme: Meme) => {
-        this.meme = meme;
-      }
-    )
+    this.meme = this.memeService.selectedMeme;
   }
 
 }

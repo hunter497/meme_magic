@@ -18,13 +18,10 @@ export class GalleryObjectComponent implements OnInit {
   constructor(private memeService: MemeService, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.meme);
   }
 
   onMakeMeme() {
-    console.log(this.meme);
-    this.memeService.memeSelected.emit(this.meme);
-
+    this.memeService.selectedMeme = this.meme;
     this.router.navigateByUrl('/builder');
   }
 
