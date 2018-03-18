@@ -8,6 +8,8 @@ export class MemeService {
 
     public memeSelected = new EventEmitter<Meme>();
 
+    constructor() {}
+
     public getMemes(): Meme[] {
         return MOCKMEME.slice();
     }
