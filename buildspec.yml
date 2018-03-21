@@ -13,10 +13,14 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Angular code
+      - mkdir build && cd build
       - ng build
   post_build:
     commands:
+      - cd ..
       - echo Build completed on `date`
+      
 artifacts:
   files:
-    - /**
+    - build*/**
+  discard-paths: yes
