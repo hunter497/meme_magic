@@ -9,6 +9,7 @@ import { MemeService } from './meme.service';
 import { HeaderComponent } from './header/header.component';
 import { BuilderComponent } from './builder/builder.component';
 
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BuilderComponent } from './builder/builder.component';
     BuilderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [MemeService],
   bootstrap: [AppComponent]

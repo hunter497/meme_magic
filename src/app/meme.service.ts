@@ -6,7 +6,9 @@ import { MOCKMEME } from './mock-meme';
 @Injectable()
 export class MemeService {
 
-    public memeSelected = new EventEmitter<Meme>();
+    public selectedMeme: Meme = this.getMemes()[0];
+
+    constructor() {}
 
     public getMemes(): Meme[] {
         return MOCKMEME.slice();
