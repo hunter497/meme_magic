@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  loadedFeature: String = "gallery";
+
+  onNavigate(feature: String) {
+    console.log(feature);
+    this.loadedFeature = feature;
+  }
+
 }
