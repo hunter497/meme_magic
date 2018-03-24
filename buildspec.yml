@@ -4,23 +4,23 @@ phases:
   install:
     commands:
       - echo Installing Angular CLI...
-      - npm install -g @angular/cli
+      - npm install -g @angular/cli > /dev/null
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install
+      - npm install > /dev/null
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Angular code
       - mkdir build && cd build
-      - ng build
+      - ng build --verbose false --progress false
   post_build:
     commands:
       - cd ..
-      - echo Build completed on `date`
+      - echo Build completed on $(date)
       
 artifacts:
   files:
-    - build*/**
+    - '*/**'
   discard-paths: yes
